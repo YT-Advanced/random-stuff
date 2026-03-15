@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tri Ân HSG Tỉnh 2025-2026 - THPT Trấn Biên</title>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #a01d22; /* Đỏ Trấn Biên */
+            --accent-color: #ffce00;  /* Vàng huy hiệu */
+            --bg-color: #fcfaf7;
+            --text-color: #2c3e50;
+        }
+
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+        }
+
+        header {
+            position: relative;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .header-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: #78282B;
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+        }
+
+        header h4 { font-weight: 300; letter-spacing: 2px; margin-bottom: 5px; }
+        header h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin: 10px 0; }
+        .badge-year { background: var(--accent-color); color: #000; padding: 5px 15px; font-weight: bold; border-radius: 20px; }
+
+        .intro-section {
+            max-width: 800px;
+            margin: -50px auto 50px;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 3;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .intro-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .intro-section h2 {
+            color: var(--primary-color);
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+        }
+
+        .container { max-width: 1100px; margin: auto; padding: 20px; }
+        
+        .team-header {
+            border-left: 8px solid var(--primary-color);
+            padding-left: 20px;
+            margin: 60px 0 30px;
+        }
+
+        .team-title { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--primary-color); margin: 0; }
+        
+        .group-frame {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .photo-card {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 15px;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #ddd;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 10px 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .photo-card img { width: 100%; border-radius: 4px; }
+        .slogan { text-align: center; font-style: italic; color: #666; margin-top: 10px; }
+
+        .member-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            gap: 30px;
+        }
+
+        .member-item:nth-child(even) { flex-direction: row-reverse; }
+
+        .member-img {
+            flex: 1;
+            max-width: 300px;
+            position: relative;
+        }
+
+        .member-img img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 10px 10px 0 var(--accent-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .member-img img:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 15px 15px 0 var(--accent-color);
+        }
+
+        .member-note {
+            flex: 2;
+            background: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            background-image: radial-gradient(#d1d1d1 1px, transparent 1px);
+            background-size: 20px 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .member-note:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .member-note h3 { margin-top: 0; color: var(--primary-color); border-bottom: 2px solid var(--accent-color); display: inline-block; }
+
+        .music-corner {
+            background: #2c3e50;
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .music-corner:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .video-container {
+            margin-top: 20px;
+            position: relative;
+            padding-bottom: 56.25%; /* Tỉ lệ 16:9 */
+            height: 0;
+        }
+
+        .video-container iframe, .video-container video {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            border-radius: 10px;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: #bdc3c7;
+            padding: 50px 20px;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .footer-info a { color: var(--accent-color); text-decoration: none; transition: color 0.3s ease; }
+        .footer-info a:hover { color: white; }
+
+        @media (max-width: 768px) {
+            .member-item, .member-item:nth-child(even) { flex-direction: column; }
+            header h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PHẦN ĐẦU TRANG -->
+    <header>
+        <div class="header-bg"></div>
+        <div class="header-content">
+            <h4>BỘ GIÁO DỤC VÀ ĐÀO TẠO TỈNH ĐỒNG NAI</h4>
+            <h3>TRƯỜNG THPT TRẤN BIÊN</h3>
+            <h1>BÁO TƯỜNG VINH DANH</h1>
+            <p><span class="badge-year">ĐỘI TUYỂN HSG TỈNH KHÓA 2025 - 2026</span></p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- BÀI VIẾT GIỚI THIỆU -->
+        <section class="intro-section">
+            <h2>Hành Trình Rực Rỡ &amp; Sự Đột Phá Khóa 2025-2026</h2>
+            <p>Trong lịch sử của mái trường THPT Trấn Biên, kì thi Học sinh giỏi tỉnh luôn là một thước đo của sự kiên trì và trí tuệ. Thế nhưng, khóa 2025-2026 đã viết nên một chương mới hoàn toàn khác biệt. Không còn là những giờ ôn luyện gò bó, đây là hành trình của sự đột phá về tư duy, nơi những tài năng trẻ tự tin thể hiện bản sắc cá nhân.</p>
+            <p>Với số lượng giải thưởng đạt kỷ lục và sự xuất sắc đồng đều ở các bộ môn, đội tuyển năm nay không chỉ mang về giải thưởng mà còn để lại những bài học về sự đoàn kết, tinh thần tự học và khát vọng vươn ra biển lớn...</p>
+        </section>
+
+        <!-- PHẦN ĐỘI TUYỂN TOÁN -->
+        <section id="math-team">
+            <div class="team-header">
+                <h2 class="team-title">Đội Tuyển Toán Học</h2>
+            </div>
+
+            <!-- 2 Ảnh chung đội Toán -->
+            <div class="group-frame">
+                <div class="photo-card">
+                    <!-- TẢI ẢNH TẬP THỂ TOÁN 1 TẠI ĐÂY -->
+                    <img src="https://via.placeholder.com/600x400?text=%E1%BA%A2nh+T%E1%BA%ADp+Th%E1%BB%83+To%C3%A1n+1" alt="Toán 1">
+                    <p class="slogan">"Toán học là ngôn ngữ của vũ trụ"</p>
+                </div>
+                <div class="photo-card">
+                    <!-- TẢI ẢNH TẬP THỂ TOÁN 2 TẠI ĐÂY -->
+                    <img src="https://via.placeholder.com/600x400?text=%E1%BA%A2nh+T%E1%BA%ADp+Th%E1%BB%83+To%C3%A1n+2" alt="Toán 2">
+                    <p class="slogan">"Đoàn kết là sức mạnh của các con số"</p>
+                </div>
+            </div>
+
+            <!-- Thành viên Toán - Bố cục Ziczac -->
+            <div class="member-list">
+                <!-- Người 1 (Ảnh trái - Text phải) -->
+                <div class="member-item">
+                    <div class="member-img">
+                        <!-- TẢI ẢNH CÁ NHÂN TẠI ĐÂY -->
+                        <img src="https://via.placeholder.com/300x400?text=%E1%BA%A2nh+To%C3%A1n+1" alt="Học sinh A">
+                    </div>
+                    <div class="member-note">
+                        <h3>Nguyễn Văn A</h3>
+                        <p><b>Lời nhắn ngỏ:</b> Gửi tặng những năm tháng rực rỡ nhất tại Trấn Biên. Cảm ơn thầy cô đã dìu dắt chúng em qua những định lý khô khan thành những bài ca về trí tuệ.</p>
+                    </div>
+                </div>
+
+                <!-- Người 2 (Ảnh phải - Text trái) -->
+                <div class="member-item">
+                    <div class="member-img">
+                        <!-- TẢI ẢNH CÁ NHÂN TẠI ĐÂY -->
+                        <img src="https://via.placeholder.com/300x400?text=%E1%BA%A2nh+To%C3%A1n+2" alt="Học sinh B">
+                    </div>
+                    <div class="member-note">
+                        <h3>Trần Thị B</h3>
+                        <p><b>Lời nhắn ngỏ:</b> Toán không chỉ là con số, Toán là cách chúng mình học nhìn nhận cuộc sống theo cách logic và đẹp đẽ nhất.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="music-corner">
+                <h3>🎶 Góc Âm Nhạc Đội Toán</h3>
+                <p>Giai điệu truyền cảm hứng sau những giờ giải đề căng thẳng</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/vUpwMtijkpo" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- PHẦN ĐỘI TUYỂN TIN HỌC -->
+        <section id="it-team">
+            <div class="team-header">
+                <h2 class="team-title" style="border-color: #0056b3;">Đội Tuyển Tin Học</h2>
+            </div>
+
+            <!-- 2 Ảnh chung đội Tin -->
+            <div class="group-frame">
+                <div class="photo-card">
+                    <!-- TẢI ẢNH TẬP THỂ TIN 1 TẠI ĐÂY -->
+                    <img src="https://via.placeholder.com/600x400?text=%E1%BA%A2nh+T%E1%BA%ADp+Th%E1%BB%83+Tin+1" alt="Tin 1">
+                    <p class="slogan">"Code with Heart, Dream with Logic"</p>
+                </div>
+                <div class="photo-card">
+                    <!-- TẢI ẢNH TẬP THỂ TIN 2 TẠI ĐÂY -->
+                    <img src="https://via.placeholder.com/600x400?text=%E1%BA%A2nh+T%E1%BA%ADp+Th%E1%BB%83+Tin+2" alt="Tin 2">
+                    <p class="slogan">"Debug cả thế giới"</p>
+                </div>
+            </div>
+
+            <!-- Thành viên Tin - Bố cục Ziczac -->
+            <div class="member-list">
+                <!-- Người 1 -->
+                <div class="member-item">
+                    <div class="member-img">
+                        <img src="https://via.placeholder.com/300x400?text=%E1%BA%A2nh+Tin+1" alt="Học sinh C">
+                    </div>
+                    <div class="member-note">
+                        <h3>Lê Văn C</h3>
+                        <p><b>Lời nhắn ngỏ:</b> Đừng sợ lỗi, hãy sợ không biết cách sửa lỗi. Cảm ơn phòng máy 302 đã chứng kiến những đêm "compile" xuyên lục địa của chúng mình!</p>
+                    </div>
+                </div>
+
+                <!-- Người 2 -->
+                <div class="member-item">
+                    <div class="member-img">
+                        <img src="https://via.placeholder.com/300x400?text=%E1%BA%A2nh+Tin+2" alt="Học sinh D">
+                    </div>
+                    <div class="member-note">
+                        <h3>Phạm Thị D</h3>
+                        <p><b>Lời nhắn ngỏ:</b> Trấn Biên là một hàm số mà ở đó, tình bạn là biến số đẹp nhất. Mãi yêu đội Tin!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="music-corner">
+                <h3>🎵 Góc Âm Nhạc Đội Tin</h3>
+                <p>Những bản nhạc không lời giúp tập trung tối đa tư duy lập trình</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/j9wp8bzCYNQ" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- PHẦN CHÂN TRANG (FOOTER) -->
+    <footer>
+        <div class="footer-info">
+            
+            <p>⭐ Founder<br>
+            <a href="mailto:phamhoanglinhnhi74@gmail.com">Phạm Hoàng Linh Nhi - phamhoanglinhnhi74@gmail.com</a><br>
+            <a href="mailto:quybao2008tb@gmail.com">Nguyễn Quý Bảo - quybao2008tb@gmail.com</a><br>
+            <a href="mailto:giabaodzabb@duck.com">Hoàng Gia Bảo - giabaodzabb@duck.com</a></p>
+            <p>📍 Biên Hòa, ngày 18 tháng 03 năm 2026</p>
+            <hr style="width: 50px; border: 1px solid var(--accent-color); margin: 20px auto;">
+            <p><b>Trường THPT Trấn Biên - Tỉnh Đồng Nai</b></p>
+            <p>Website: <a href="https://thpttranbien.edu.vn/" target="_blank">thpttranbien.edu.vn</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
