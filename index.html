@@ -190,6 +190,21 @@
             border-radius: 10px;
         }
 
+        .video-section {
+            text-align: center;
+            margin: 40px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            background: #000;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
         footer {
             background: #1a1a1a;
             color: #bdc3c7;
@@ -209,7 +224,6 @@
 </head>
 <body>
 
-    <!-- PHẦN ĐẦU TRANG -->
     <header>
         <div class="header-bg"></div>
         <div class="header-content">
@@ -221,20 +235,30 @@
     </header>
 
     <div class="container">
-        <!-- BÀI VIẾT GIỚI THIỆU -->
         <section class="intro-section">
             <h2>Hành Trình Rực Rỡ &amp; Sự Đột Phá Khóa 2025-2026</h2>
             <p>Trong lịch sử của mái trường THPT Trấn Biên, kì thi Học sinh giỏi tỉnh luôn là một thước đo của sự kiên trì và trí tuệ. Thế nhưng, khóa 2025-2026 đã viết nên một chương mới hoàn toàn khác biệt. Không còn là những giờ ôn luyện gò bó, đây là hành trình của sự đột phá về tư duy, nơi những tài năng trẻ tự tin thể hiện bản sắc cá nhân.</p>
             <p>Với số lượng giải thưởng đạt kỷ lục và sự xuất sắc đồng đều ở các bộ môn, đội tuyển năm nay không chỉ mang về giải thưởng mà còn để lại những bài học về sự đoàn kết, tinh thần tự học và khát vọng vươn ra biển lớn...</p>
         </section>
 
-        <!-- PHẦN ĐỘI TUYỂN TOÁN -->
+        <section id="math-it-family">
+            <div class="team-header" style="border-left-color: #27ae60;">
+                <h2 class="team-title" style="color: #27ae60;">Toán Tin 1 nhà</h2>
+            </div>
+
+            <div class="video-section">
+                <video width="1280" height="720" controls style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+                    <source src="toanxtin.mp4" type="video/mp4">
+                    Trình duyệt của bạn không hỗ trợ video.
+                </video>
+            </div>
+        </section>
+
         <section id="math-team">
             <div class="team-header">
                 <h2 class="team-title">Đội Tuyển Toán Học</h2>
             </div>
 
-            <!-- 2 Ảnh chung đội Toán -->
             <div class="group-frame">
                 <div class="photo-card">
                     <img src="./26to1.jpg" alt="Toán 1">
@@ -316,7 +340,6 @@
         </section>
     </div>
 
-    <!-- PHẦN CHÂN TRANG (FOOTER) -->
     <footer>
         <div class="footer-info">
             
